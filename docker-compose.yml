@@ -9,7 +9,6 @@ services:
       - MYSQL_USER=${DB_USER:-username}
       - MYSQL_PASSWORD=${DB_PASS:-secret}
       - MYSQL_ROOT_PASSWORD=${DB_PASS:-secret}
-      - TZ=${TZ:-Asia/Tokyo}
     ports:
       - '3306:3306'
     volumes:

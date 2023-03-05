@@ -8,7 +8,11 @@
     "start": "npx ts-node src/index.ts",
     "dev": "nodemon --exec ts-node src/index.ts",
     "lint": "eslint . --ignore-path .gitignore --ext .js,.ts,.jsx,.ts",
-    "lint:fix": "eslint . --ignore-path .gitignore --fix --ext .js,.ts,.jsx,"
+    "lint:fix": "eslint . --ignore-path .gitignore --fix --ext .js,.ts,.jsx,",
+    "db:migrate": "npx prisma migrate dev --name init"
+  },
+  "prisma": {
+    "schema": "./src/infrastructure/database/prisma/schema.prisma"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
@@ -22,7 +26,9 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "@prisma/client": "^4.11.0",
     "express": "^4.18.2",
-    "mysql2": "^3.1.2"
+    "mysql2": "^3.1.2",
+    "prisma": "^4.11.0"
   }
 }

@@ -9,7 +9,7 @@
     "dev": "nodemon --exec ts-node src/index.ts",
     "lint": "eslint . --ignore-path .gitignore --ext .js,.ts,.jsx,.ts",
     "lint:fix": "eslint . --ignore-path .gitignore --fix --ext .js,.ts,.jsx,",
-    "db:migrate": "npx prisma migrate dev --name init"
+    "db:migrate": "npx prisma migrate dev"
   },
   "prisma": {
     "schema": "./src/infrastructure/database/prisma/schema.prisma"
